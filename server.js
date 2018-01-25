@@ -56,6 +56,17 @@ app.get("/api/waitlist", function(req, res) {
     res.json(waitlist);
 });
 
+// Create New Characters - takes in JSON input
+app.post("/api/new", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+  // This works because of our body-parser middleware
+  var newReservation = req.body;
+  // newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+  console.log(newReservation);
+  tables.push(newReservation);
+  res.json(newReservation);
+});
+
 // Starts the server to begin listening
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
