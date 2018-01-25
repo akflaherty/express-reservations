@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Page</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <!-- ::before -->
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <span class="glyphicon glyphicon-fire">
+        </span>
+        Hot Restaurant
+      </h1>
+      <hr>
+      <h2 class="text-center">Current Reservations and Waiting List</h2>
+      <br>
+      <div class="text-center">
+        <a href="/reserve">
+          <button type="button" class="btn btn-lg btn-danger">
+            <span class="glyphicon glyphicon-credit-card">
+              <!-- ::before -->
+            </span>
+            Make Reservation
+          </button>
+        </a>
+        <a href="/">
+          <button type="button" class="btn btn-lg btn-default">
+            <span class="glyphicon glyphicon-home">
+              <!-- ::before -->
+            </span>
+          </button>
+        </a>
+    </div>
+  </div>
+  <div class="row">
+     <!-- ::before -->
+    <div class="col-lg-12">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Current Reservations</h4>
+        </div>
+        <div class="panel-body" id="tableSection">
+          <!-- ::before -->
+              <div class="well" id="tableWell-01">
+                <h2>
+                  <span class="label lable-primary">1</span>
+                   | test
+                </h2>
+              </div>
+
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">Waiting List</h4>
+          </div>
+          <div class="panel-body" id="waitlistSection">
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+      <div class="container">
+        <!-- ::before -->
+        <p>
+          <a href="#" id="clear">Clear Table</a>
+           | 
+          <a href="/api/waitlist">API Table Link</a>
+           | 
+          <a href="/api/waitlist">API Wait List</a>
+        </p>
+        <!-- ::after -->
+      </div>
+    </footer>
+    <!-- ::after -->
+  </div>
+     
+</body>
+</html>
