@@ -33,7 +33,7 @@ var waitlist = [{
 }];
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/tables", function(req, res) {
@@ -54,6 +54,17 @@ app.get("/api/tables", function(req, res) {
 // waitlist API
 app.get("/api/waitlist", function(req, res) {
     res.json(waitlist);
+});
+
+// Create New Characters - takes in JSON input
+app.post("/api/new", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+  // This works because of our body-parser middleware
+  var newReservation = req.body;
+  // newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+  console.log(newReservation);
+  tables.push(newReservation);
+  res.json(newReservation);
 });
 
 // Starts the server to begin listening
