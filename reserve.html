@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tables Page</title>
+  <title>Reservation Page</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
@@ -20,15 +20,15 @@
         Hot Restaurant
       </h1>
       <hr>
-      <h2 class="text-center">Current Reservations and Waiting List</h2>
+      <h2 class="text-center">Make your reservation</h2>
       <br>
       <div class="text-center">
-        <a href="/reserve">
-          <button type="button" class="btn btn-lg btn-danger">
-            <span class="glyphicon glyphicon-credit-card">
+        <a href="/tables">
+          <button type="button" class="btn btn-lg btn-primary">
+            <span class="glyphicon glyphicon-list-alt">
               <!-- ::before -->
             </span>
-            Make Reservation
+            View Tables
           </button>
         </a>
         <a href="/">
@@ -46,35 +46,40 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">Current Reservations</h4>
+          <h4 class="panel-title">Table Reservations</h4>
         </div>
-        <div class="panel-body" id="tableSection">
+        <div class="panel-body">
           <!-- ::before -->
-              <div class="well" id="tableWell-01">
-                <h2>
-                  <span class="label lable-primary">1</span>
-                   | test
-                </h2>
+            <form role="form">
+              <div class="form-group">
+                <label for>Name</label>
+                <input type="text" class="form-control" id="reserve_name">
               </div>
-
+              <div class="form-group">
+                <label for>Phone Number</label>
+                <input type="text" class="form-control" id="reserve_phone">
+              </div>
+              <div class="form-group">
+                <label for="age">Email</label>
+                <input type="text" class="form-control" id="reserve_email">
+              </div>
+              <div class="form-group">
+                <label for>Unique ID</label>
+                <input type="text" class="form-control" id="reserve_uniqueID">
+              </div>
+              <button type="submit" class="btn btn_primary submit">Submit</button>
+            </form>
+            <!-- ::after -->
+          </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">Waiting List</h4>
-          </div>
-          <div class="panel-body" id="waitlistSection">
-          </div>
       </div>
+      <!-- ::after -->
     </div>
-  </div>
-
     <footer class="footer">
       <div class="container">
         <!-- ::before -->
         <p>
-          <a href="#" id="clear">Clear Table</a>
-           | 
-          <a href="/api/waitlist">API Table Link</a>
+          <a href="/api/tables">API Table Link</a>
            | 
           <a href="/api/waitlist">API Wait List</a>
         </p>
